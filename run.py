@@ -50,7 +50,7 @@ def temp_below_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city, second: water activities, third: hiking.')
+    print('First: visiting city, second: water activities, third: hiking.\n')
     user_answer = input('Please enter your answer here:')
     if user_answer == first:
         print('The best would be to visit Poland, Germany,' +
@@ -77,7 +77,7 @@ def temp_above_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city, second: water activities, third: hiking.')
+    print('First: visiting city, second: water activities, third: hiking.\n')
     user_answer = input('Please enter your answer here:')
     if user_answer == first:
         print('The best would be to visit Spain, Italy,' +
@@ -85,10 +85,10 @@ def temp_above_activities():
     elif user_answer == second:
         print('How about Cyprus, Spain, Italy, Greece, Maldives or Zanzibar')
     elif user_answer == third:
-        print('The best places for hiking you will find in' +
+        print('The best places for hiking you will find in,' +
               'Italy, Spain or France')
     else:
         print('Please try again and enter correct word!')
-            
+
 
 temp_above_activities()
