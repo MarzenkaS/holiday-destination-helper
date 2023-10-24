@@ -12,7 +12,7 @@ def selecting_a_season():
     print('2: the winter season.\n')
 
     while (True):
-        user_answer = input('Please enter your choice 1 or 2:')
+        user_answer = input('Please enter your choice 1 or 2:\n')
         if user_answer == "1":
             print(warm_choice)
             temp_choice(warm_choice)
@@ -23,42 +23,34 @@ def selecting_a_season():
             print('Incorrect input please enter 1 for summer and 2 for winter')
 
 
-# selecting_a_season()
-
-
 # def summer_season():
 def temp_choice(season):
     """
     Collecting user choice for temperature.
     """
-    cooler = "below"
-    warmer = "above"
+    # cooler = "below"
+    # warmer = "above"
     if season == "summer":
-        print('What weather are you interested in?' +
+        print('What weather are you interested in? ' +
               'Below or above 30 degrees?\n')
         print('1 : cooler.\n')
         print('2 : warmer.\n')
     elif season == "winter":
-        print('What weather are you interested in?' +
-              'Below or above 0 degrees?\n')
+        print('Are you looking for an exotic place or with snow?\n')
         print('1 : cooler.\n')
         print('2 : warmer.\n')
 
-    while (True):
-        user_answer = input('Please enter your option from above (1/2):')
+    while ("summer"):
+        user_answer = input('Please enter your option from above (1/2):\n')
         if user_answer == "1":
-            print(temp_cooler_activities(season, cooler))
-        # temp_cooler_activities(season, cooler)
-        # < = Either pass with parameters and change function to activities
+            print(temp_cooler_activities())
         elif user_answer == "2":
             print(temp_warmer_activities())
-        # temp_warmer_activities() <= or keep same
-        # but end whileloop by calling next function
         else:
-            print('Please try again and enter correct option (1/2)')
+            print('Please try again and enter correct option (1/2):')
 
 
-temp_choice(temp_cooler_activities(), temp_warmer_activities())
+# temp_choice()
 
 
 def temp_cooler_activities():
@@ -71,15 +63,20 @@ def temp_cooler_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city, second: water activities, third: hiking.\n')
-    user_answer = input('Please enter your answer here:')
-    if user_answer == first:
-        print('The best would be to visit Poland, Germany,' +
+    print('First: visiting city(v),\n'
+          'second: water activities(w),\n'
+          'third: hiking(h).\n')
+    user_answer = input('Please enter your answer here (v/w/h):\n')
+    if user_answer == "v":
+        print(first)
+        print('The best would be to visit Poland, Germany, ' +
               'Austria and Czech Republic.')
-    elif user_answer == second:
+    elif user_answer == "w":
+        print(second)
         print('Good idea is to travel to Poland, Germany or France.')
-    elif user_answer == third:
-        print('The best places for hiking you will find in Austria,' +
+    elif user_answer == "h":
+        print(third)
+        print('The best places for hiking you will find in Austria, ' +
               'Switzerland, Slovakia, Germany, Poland.\n')
     else:
         print('Please try again and enter correct word!')
@@ -98,18 +95,24 @@ def temp_warmer_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city, second: water activities, third: hiking.\n')
-    user_answer = input('Please enter your answer here:')
-    if user_answer == first:
-        print('The best would be to visit Spain, Italy,' +
-              'Greece or France')
-    elif user_answer == second:
-        print('How about Cyprus, Spain, Italy, Greece, Maldives or Zanzibar')
-    elif user_answer == third:
-        print('The best places for hiking you will find in,' +
-              'Italy, Spain or France')
+    print('First: visiting city(v),\n'
+          'second: water activities(w),\n'
+          'third: hiking(h).\n')
+    user_answer = input('Please enter your answer here (v/w/h):')
+    if user_answer == "v":
+        print(first)
+        print('The best would be to visit Spain, Italy, ' +
+              'Greece or France.')
+    elif user_answer == "w":
+        print(second)
+        print('How about Cyprus, Spain, Italy, Greece, Maldives or Zanzibar.')
+    elif user_answer == "h":
+        print(third)
+        print('The best places for hiking you will find in, ' +
+              'Italy, Spain or France.')
     else:
         print('Please try again and enter correct word!')
 
 
 # temp_warmer_activities()
+selecting_a_season()
