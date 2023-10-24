@@ -7,40 +7,61 @@ def selecting_a_season():
     """
     warm_choice = "summer"
     cold_choice = "winter"
-    print('Are you interested in a holiday in the summer or winter season?\n')
-    user_answer = input('Please enter your answer here by using one word:')
-    if user_answer == warm_choice:
-        print()
-    elif user_answer == cold_choice:
-        print()
-    else:
-        print('Please try again and enter correct word!')
+    print('Are you interested in a holiday in: the summer or winter season?\n')
+    print('1: the summer season.\n')
+    print('2: the winter season.\n')
+
+    while (True):
+        user_answer = input('Please enter your choice 1 or 2:')
+        if user_answer == "1":
+            print(warm_choice)
+            temp_choice(warm_choice)
+        elif user_answer == "2":
+            print(cold_choice)
+            temp_choice(cold_choice)
+        else:
+            print('Incorrect input please enter 1 for summer and 2 for winter')
 
 
-selecting_a_season()
+# selecting_a_season()
 
 
 # def summer_season():
-def summer_temp_choice():
+def temp_choice(season):
     """
     Collecting user choice for temperature.
     """
-    hot = "below"
-    hotter = "above"
-    print('What weather are you interested in? Below or above 30 degrees?\n')
-    user_answer = input('Please enter your answer here by using one word:')
-    if user_answer == hot:
-        print()
-    elif user_answer == hotter:
-        print()
-    else:
-        print('Please try again and enter correct word!')
+    cooler = "below"
+    warmer = "above"
+    if season == "summer":
+        print('What weather are you interested in?' +
+              'Below or above 30 degrees?\n')
+        print('1 : cooler.\n')
+        print('2 : warmer.\n')
+    elif season == "winter":
+        print('What weather are you interested in?' +
+              'Below or above 0 degrees?\n')
+        print('1 : cooler.\n')
+        print('2 : warmer.\n')
+
+    while (True):
+        user_answer = input('Please enter your option from above (1/2):')
+        if user_answer == "1":
+            print(temp_cooler_activities(season, cooler))
+        # temp_cooler_activities(season, cooler)
+        # < = Either pass with parameters and change function to activities
+        elif user_answer == "2":
+            print(temp_warmer_activities())
+        # temp_warmer_activities() <= or keep same
+        # but end whileloop by calling next function
+        else:
+            print('Please try again and enter correct option (1/2)')
 
 
-summer_temp_choice()
+temp_choice(temp_cooler_activities(), temp_warmer_activities())
 
 
-def temp_below_activities():
+def temp_cooler_activities():
     """
     Collecting data from user about preferred activities.
     Suggestions of holiday destinations selected based on
@@ -64,10 +85,10 @@ def temp_below_activities():
         print('Please try again and enter correct word!')
 
 
-temp_below_activities()
+# temp_cooler_activities()
 
 
-def temp_above_activities():
+def temp_warmer_activities():
     """
     Collecting data from user about preferred activities.
     Suggestions of holiday destinations selected based on
@@ -91,4 +112,4 @@ def temp_above_activities():
         print('Please try again and enter correct word!')
 
 
-temp_above_activities()
+# temp_warmer_activities()
