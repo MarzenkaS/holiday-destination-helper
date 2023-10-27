@@ -1,6 +1,18 @@
 import math
 
 
+def welcome_screen():
+    """
+    introduction and description of the application.
+    """
+    print('Welcome to the Holiday Destination Helper App.\n' +
+          'If you are wondering where you want to spend\n' +
+          'your holiday, this app is made for you.\n'
+          'Just please follow the questions and at the end\n' +
+          'you will see suggested holiday destinations.\n' +
+          'Enjoy!')
+
+
 def selecting_a_season():
     """
     Collecting data from users regarding preferred season for holiday.
@@ -115,4 +127,5 @@ def temp_warmer_activities():
 
 
 # temp_warmer_activities()
+welcome_screen()
 selecting_a_season()
