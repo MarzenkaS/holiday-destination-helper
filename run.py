@@ -61,6 +61,15 @@ def temp_choice(season):
         else:
             print('Please try again and enter correct option (1/2):')
 
+    while ("winter"):
+        user_answer = input('Please enter your option from above (1/2):\n')
+        if user_answer == "1":
+            print(exotic_activities())
+        elif user_answer == "2":
+            print(with_snow_activities())
+        else:
+            print('Please try again and enter correct option (1/2):')        
+
 
 # temp_choice()
 
