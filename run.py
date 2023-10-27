@@ -67,7 +67,7 @@ def temp_choice(season):
 
 def temp_cooler_activities():
     """
-    Collecting data from user about preferred activities 
+    Collecting data from user about preferred activities
     in summer season with cooler temperature.
     Suggestions of holiday destinations selected based on
     data entered by the user.
@@ -76,9 +76,9 @@ def temp_cooler_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city(v),\n'
-          'second: water activities(w),\n'
-          'third: hiking(h).\n')
+    print('First: visiting city(v).\n'
+          'Second: water activities(w).\n'
+          'Third: hiking(h).\n')
     user_answer = input('Please enter your answer here (v/w/h):\n')
     if user_answer == "v":
         print(first)
@@ -109,9 +109,9 @@ def temp_warmer_activities():
     second = "water activities"
     third = "hiking"
     print('Which activities interest you the most?')
-    print('First: visiting city(v),\n'
-          'second: water activities(w),\n'
-          'third: hiking(h).\n')
+    print('First: visiting city(v).\n'
+          'Second: water activities(w).\n'
+          'Third: hiking(h).\n')
     user_answer = input('Please enter your answer here (v/w/h):')
     if user_answer == "v":
         print(first)
@@ -133,19 +133,19 @@ def temp_warmer_activities():
 def exotic_activities():
     """
     Collecting data from user about preferred activities
-    in exotic place.
+    in winter season in exotic places.
     Suggestions of holiday destinations selected based on
     data entered by the user.
     """
     first = "visiting city"
     second = "water activities"
     print('Which activities interest you the most?')
-    print('First: visiting city(v),\n'
-          'second: water activities(w).)
+    print('First: visiting city(v).\n'
+          'Second: water activities(w).\n')
     user_answer = input('Please enter your answer here (v/w):')
     if user_answer == "v":
         print(first)
-        print('The best would be to visit Thailand, Australia\' +
+        print('The best would be to visit Thailand, Australia\n' +
               'Mexico or Brazil.')
     elif user_answer == "w":
         print(second)
@@ -154,13 +154,39 @@ def exotic_activities():
         print('Please try again and enter correct word!')
 
 
+# exotic_activities()
+
+def with_snow_activities():
+    """
+    Collecting data from user about preferred activities
+    in winter season in snowy places.
+    Suggestions of holiday destinations selected based on
+    data entered by the user.
+    """
+    first = "spa, saunas, thermal baths"
+    second = "visiting cities, Christmas Markets"
+    third = "skiing, snowboard"
+    print('Which activities interest you the most?')
+    print('First: spa, saunas, thermal baths(s).\n'
+          'Second: visiting cities, Christmas Markets(v).\n'
+          'Third: Skiing, Snowboard(ss).\n')
+    user_answer = input('Please enter your answer here (s/v/ss):')
+    if user_answer == "s":
+        print(first)
+        print('The best would be to go to France, Italy, ' +
+              'Germany or Hungary.')
+    elif user_answer == "v":
+        print(second)
+        print('How about Poland, Germany or Czech Republic.')
+    elif user_answer == "ss":
+        print(third)
+        print('The best places for skiing and snowboard you will find in, ' +
+              'Italy, Germany, France, Austria and Switzerland')
+    else:
+        print('Please try again and enter correct word!')
 
 
-
-
-
-
-
+# with_snow_activities()
 
 welcome_screen()
 selecting_a_season()
