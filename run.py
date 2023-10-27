@@ -3,7 +3,7 @@ import math
 
 def welcome_screen():
     """
-    introduction and description of the application.
+    Introduction and description of the application.
     """
     print('Welcome to the Holiday Destination Helper App.\n' +
           'If you are wondering where you want to spend\n' +
@@ -45,12 +45,12 @@ def temp_choice(season):
     if season == "summer":
         print('What weather are you interested in? ' +
               'Below or above 30 degrees?\n')
-        print('1 : cooler.\n')
-        print('2 : warmer.\n')
+        print('1 : cooler\n')
+        print('2 : warmer\n')
     elif season == "winter":
         print('Are you looking for an exotic place or with snow?\n')
-        print('1 : cooler.\n')
-        print('2 : warmer.\n')
+        print('1 : exotic\n')
+        print('2 : with snow.\n')
 
     while ("summer"):
         user_answer = input('Please enter your option from above (1/2):\n')
@@ -67,7 +67,8 @@ def temp_choice(season):
 
 def temp_cooler_activities():
     """
-    Collecting data from user about preferred activities.
+    Collecting data from user about preferred activities 
+    in summer season with cooler temperature.
     Suggestions of holiday destinations selected based on
     data entered by the user.
     """
@@ -99,7 +100,8 @@ def temp_cooler_activities():
 
 def temp_warmer_activities():
     """
-    Collecting data from user about preferred activities.
+    Collecting data from user about preferred activities
+    in summer season with warmer temperature.
     Suggestions of holiday destinations selected based on
     data entered by the user.
     """
@@ -127,5 +129,38 @@ def temp_warmer_activities():
 
 
 # temp_warmer_activities()
+
+def exotic_activities():
+    """
+    Collecting data from user about preferred activities
+    in exotic place.
+    Suggestions of holiday destinations selected based on
+    data entered by the user.
+    """
+    first = "visiting city"
+    second = "water activities"
+    print('Which activities interest you the most?')
+    print('First: visiting city(v),\n'
+          'second: water activities(w).)
+    user_answer = input('Please enter your answer here (v/w):')
+    if user_answer == "v":
+        print(first)
+        print('The best would be to visit Thailand, Australia\' +
+              'Mexico or Brazil.')
+    elif user_answer == "w":
+        print(second)
+        print('How about Australia, Zanzibar, Cuba or Domenican Rep.')
+    else:
+        print('Please try again and enter correct word!')
+
+
+
+
+
+
+
+
+
+
 welcome_screen()
 selecting_a_season()
