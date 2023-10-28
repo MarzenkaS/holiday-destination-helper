@@ -49,7 +49,7 @@ def temp_choice(season):
         print('2 : with snow.\n')
     
     temp_selected = True
-    user_answer = input('Please enter your option from above (1/2):\n')
+    user_answer = input('Please enter your option from above (1 or 2):\n')
     
     while (season == "summer" and temp_selected):
         if user_answer == "1":
@@ -59,7 +59,7 @@ def temp_choice(season):
             temp_selected = False
             temp_warmer_activities()
         else:
-            user_answer = input('Please try again and enter correct option (1/2):')
+            user_answer = input('Please try again and enter correct option (1 or 2):')
 
     while (season =="winter" and temp_selected):
         if user_answer == "1":
@@ -69,7 +69,7 @@ def temp_choice(season):
             temp_selected = False
             with_snow_activities()
         else:
-            user_answer = input('Please try again and enter correct option (1/2):')
+            user_answer = input('Please try again and enter correct option (1 or 2):')
 
 
 def temp_cooler_activities():
@@ -161,7 +161,7 @@ def exotic_activities():
     while (choice):
         print('Which activities interest you the most?')
         print(f'Option 1: {FIRST}.\n'
-              f'Option 1: {SECOND}.\n')
+              f'Option 2: {SECOND}.\n')
         user_answer = input('Please enter your answer here (1 or 2):')
         if user_answer == "1":
             print(f"You chose {FIRST}")
@@ -192,8 +192,8 @@ def with_snow_activities():
     while (choice):
         print('Which activities interest you the most?')
         print(f'Option 1: {FIRST}.\n'
-              f'Option 1: {SECOND}.\n'
-              f'Option 1: {THIRD}.\n')
+              f'Option 2: {SECOND}.\n'
+              f'Option 3: {THIRD}.\n')
         user_answer = input('Please enter your answer here (1, 2 or 3):')
         if user_answer == "1":
             print(f"You chose {FIRST}")
