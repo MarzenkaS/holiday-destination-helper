@@ -1,6 +1,3 @@
-import math
-
-
 def welcome_screen():
     """
     Introduction and description of the application.
@@ -22,56 +19,57 @@ def selecting_a_season():
     print('Are you interested in a holiday in: the summer or winter season?\n')
     print('1: the summer season.\n')
     print('2: the winter season.\n')
-
-    while (True):
+    season_selected = True
+    while (season_selected):
         user_answer = input('Please enter your choice 1 or 2:\n')
         if user_answer == "1":
             print(warm_choice)
+            season_selected = False
             temp_choice(warm_choice)
         elif user_answer == "2":
             print(cold_choice)
+            season_selected = False
             temp_choice(cold_choice)
         else:
             print('Incorrect input please enter 1 for summer and 2 for winter')
 
 
-# def summer_season():
 def temp_choice(season):
     """
     Collecting user choice for temperature.
     """
-    # cooler = "below"
-    # warmer = "above"
     if season == "summer":
         print('What weather are you interested in? ' +
-              'Below or above 30 degrees?\n')
+              'Cooler below or warmer above 30 degrees?\n')
         print('1 : cooler\n')
         print('2 : warmer\n')
     elif season == "winter":
         print('Are you looking for an exotic place or with snow?\n')
         print('1 : exotic\n')
         print('2 : with snow.\n')
-
-    while ("summer"):
-        user_answer = input('Please enter your option from above (1/2):\n')
+    
+    temp_selected = True
+    user_answer = input('Please enter your option from above (1/2):\n')
+    
+    while (season == "summer" and temp_selected):
         if user_answer == "1":
-            print(temp_cooler_activities())
+            temp_selected = False
+            temp_cooler_activities()
         elif user_answer == "2":
-            print(temp_warmer_activities())
+            temp_selected = False
+            temp_warmer_activities()
         else:
-            print('Please try again and enter correct option (1/2):')
+            user_answer = input('Please try again and enter correct option (1/2):')
 
-    while ("winter"):
-        user_answer = input('Please enter your option from above (1/2):\n')
+    while (season =="winter" and temp_selected):
         if user_answer == "1":
-            print(exotic_activities())
+            temp_selected = False
+            exotic_activities()
         elif user_answer == "2":
-            print(with_snow_activities())
+            temp_selected = False
+            with_snow_activities()
         else:
-            print('Please try again and enter correct option (1/2):')        
-
-
-# temp_choice()
+            user_answer = input('Please try again and enter correct option (1/2):')
 
 
 def temp_cooler_activities():
