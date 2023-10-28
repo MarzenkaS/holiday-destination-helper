@@ -31,7 +31,8 @@ def selecting_a_season():
             season_selected = False
             temp_choice(cold_choice)
         else:
-            print('Incorrect input please enter 1 for summer and 2 for winter')
+            print('Incorrect input please enter 1 for summer and' +
+                  '2 for winter.\n')
 
 
 def temp_choice(season):
@@ -47,10 +48,10 @@ def temp_choice(season):
         print('Are you looking for an exotic place or with snow?\n')
         print('1 : exotic\n')
         print('2 : with snow.\n')
-    
+
     temp_selected = True
     user_answer = input('Please enter your option from above (1 or 2):\n')
-    
+
     while (season == "summer" and temp_selected):
         if user_answer == "1":
             temp_selected = False
@@ -59,9 +60,10 @@ def temp_choice(season):
             temp_selected = False
             temp_warmer_activities()
         else:
-            user_answer = input('Please try again and enter correct option (1 or 2):')
+            user_answer = input('Please try again and enter' +
+                                'correct option (1 or 2):\n')
 
-    while (season =="winter" and temp_selected):
+    while (season == "winter" and temp_selected):
         if user_answer == "1":
             temp_selected = False
             exotic_activities()
@@ -69,7 +71,8 @@ def temp_choice(season):
             temp_selected = False
             with_snow_activities()
         else:
-            user_answer = input('Please try again and enter correct option (1 or 2):')
+            user_answer = input('Please try again and enter correct' +
+                                'option (1 or 2):\n')
 
 
 def temp_cooler_activities():
@@ -91,10 +94,10 @@ def temp_cooler_activities():
         user_answer = input('Please enter your answer here (1, 2 or 3):\n')
         if user_answer == "1":
             print(f"You chose {FIRST}")
-            print('The best would be to visit Poland, Germany, ' +
+            print('The best would be to visit Poland, Germany,' +
                   'Austria and Czech Republic.')
             choice = False
-            repeat()      
+            repeat()
         elif user_answer == "2":
             print(f"You chose {SECOND}")
             print('Good idea is to travel to Poland, Germany or France.')
@@ -102,10 +105,10 @@ def temp_cooler_activities():
             repeat()
         elif user_answer == "3":
             print(f"You chose {THIRD}")
-            print('The best places for hiking you will find in Austria, ' +
-              'Switzerland, Slovakia, Germany, Poland.\n')
+            print('The best places for hiking you will find in Austria,' +
+                  'Switzerland, Slovakia, Germany, Poland.')
             choice = False
-            repeat()      
+            repeat()
         else:
             print('Please try again and enter correct word!')
 
@@ -126,26 +129,27 @@ def temp_warmer_activities():
         print(f'Option 1: {FIRST}.\n'
               f'Option 2: {SECOND}.\n'
               f'Option 3: {THIRD}.\n')
-        user_answer = input('Please enter your answer here (1, 2 or 3):')
+        user_answer = input('Please enter your answer here (1, 2 or 3):\n')
         if user_answer == "1":
             print(f"You chose {FIRST}")
-            print('The best would be to visit Spain, Italy, ' +
+            print('The best would be to visit Spain, Italy,' +
                   'Greece or France.')
             choice = False
-            repeat()      
+            repeat()
         elif user_answer == "2":
             print(f"You chose {SECOND}")
-            print('How about Cyprus, Spain, Italy, Greece, Maldives or Zanzibar.')
+            print('How about Cyprus, Spain, Italy, Greece, Maldives' +
+                  'or Zanzibar.')
             choice = False
             repeat()
         elif user_answer == "3":
             print(f"You chose {THIRD}")
-            print('The best places for hiking you will find in, ' +
+            print('The best places for hiking you will find in' +
                   'Italy, Spain or France.')
             choice = False
             repeat()
         else:
-            print('Please try again and enter correct word!')
+            print('Please try again and enter correct word!\n')
 
 
 def exotic_activities():
@@ -162,10 +166,10 @@ def exotic_activities():
         print('Which activities interest you the most?')
         print(f'Option 1: {FIRST}.\n'
               f'Option 2: {SECOND}.\n')
-        user_answer = input('Please enter your answer here (1 or 2):')
+        user_answer = input('Please enter your answer here (1 or 2):\n')
         if user_answer == "1":
             print(f"You chose {FIRST}")
-            print('The best would be to visit Thailand, Australia\n' +
+            print('The best would be to visit Thailand, Australia' +
                   'Mexico or Brazil.')
             choice = False
             repeat()
@@ -175,7 +179,7 @@ def exotic_activities():
             choice = False
             repeat()
         else:
-            print('Please try again and enter correct word!')
+            print('Please try again and enter correct word!\n')
 
 
 def with_snow_activities():
@@ -194,10 +198,10 @@ def with_snow_activities():
         print(f'Option 1: {FIRST}.\n'
               f'Option 2: {SECOND}.\n'
               f'Option 3: {THIRD}.\n')
-        user_answer = input('Please enter your answer here (1, 2 or 3):')
+        user_answer = input('Please enter your answer here (1, 2 or 3):\n')
         if user_answer == "1":
             print(f"You chose {FIRST}")
-            print('The best would be to go to France, Italy, ' +
+            print('The best would be to go to France, Italy,' +
                   'Germany or Hungary.')
             choice = False
             repeat()
@@ -208,17 +212,18 @@ def with_snow_activities():
             repeat()
         elif user_answer == "3":
             print(f"You chose {THIRD}")
-            print('The best places for skiing and snowboard you will find in, ' +
-                  'Italy, Germany, France, Austria and Switzerland')
+            print('The best places for skiing and snowboard' +
+                  'you will find in Italy, Germany, France' +
+                  'Austria and Switzerland')
             choice = False
             repeat()
         else:
-            print('Please try again and enter correct word!')
+            print('Please try again and enter correct word!\n')
 
 
 def repeat():
     repeat = True
-    while ( repeat ):
+    while (repeat):
         again = input("Would you like to try again? (y/n):")
         if again == "y":
             repeat = False
